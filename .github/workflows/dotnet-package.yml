@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  PROJECT_FOLDER: AbyssBenchmark/src/AbyssBenchmarkLib
+  PROJECT_FOLDER: ${{ github.workspace }}/src/AbyssBenchmarkLib
   PROJECT: AbyssBenchmarkLib.csproj
   NUGET_REPO_URL: https://api.nuget.org/v3/index.json
   #NUGET_REPO_URL: https://nuget.pkg.github.com/lekrieg/index.json
@@ -29,6 +29,7 @@ jobs:
             6.0.x
 
       - name: Check project folder
+        run: echo PROJECT_FOLDER
         run: ls -R $PROJECT_FOLDER
 
       - name: Install Dependencies
