@@ -5,6 +5,20 @@
 	  <ImplicitUsings>disabled</ImplicitUsings>
 	  <Nullable>enable</Nullable>
 	  <Version>0.0.0</Version>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <Title>Abyss benchmark lib</Title>
+	  <PackageId>AbyssBenchmarkLib</PackageId>
+	  <PackageTags>benchmark;simplebenchmark;</PackageTags>
+	  <Authors>Lekrieg</Authors>
+	  <Company>Lekrieg productions</Company>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
