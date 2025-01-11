@@ -35,7 +35,7 @@ jobs:
         run: dotnet restore $PROJECT_FOLDER/$PROJECT
 
       - name: Build Project
-        run: dotnet build $PROJECT_FOLDER/$PROJECT
+        run: dotnet build --configuration Release $PROJECT_FOLDER/$PROJECT
 
       - name: Create the package
         run: dotnet pack --configuration Release $PROJECT_FOLDER/$PROJECT
