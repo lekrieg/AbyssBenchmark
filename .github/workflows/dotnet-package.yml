@@ -6,8 +6,8 @@ on:
       - main
 
 env:
-  PROJECT_FOLDER: <projectfolder>
-  PROJECT: <project>.csproj
+  PROJECT_FOLDER: AbyssBenchmark/src/AbyssBenchmarkLib
+  PROJECT: AbyssBenchmarkLib.csproj
   NUGET_REPO_URL: https://api.nuget.org/v3/index.json
   #NUGET_REPO_URL: https://nuget.pkg.github.com/lekrieg/index.json
 
@@ -38,4 +38,4 @@ jobs:
         run: dotnet pack --configuration Release $PROJECT_FOLDER/$PROJECT
 
       - name: Publish the package to Rository
-        run: dotnet nuget push $PROJECT_FOLDER/bin/Release/*.nupkg -k ${{ secrets.G_TOKEN }} -s $NUGET_REPO_URL
+        run: dotnet nuget push $PROJECT_FOLDER/bin/Release/*.nupkg -k ${{ secrets.ABYSS_BENCHMARK_TOKEN }} -s $NUGET_REPO_URL
