@@ -28,6 +28,9 @@ jobs:
           dotnet-version: | 
             6.0.x
 
+      - name: Check project folder
+        run: ls -R $PROJECT_FOLDER
+
       - name: Install Dependencies
         run: dotnet restore $PROJECT_FOLDER/$PROJECT
 
