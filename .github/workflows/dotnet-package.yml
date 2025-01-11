@@ -29,7 +29,6 @@ jobs:
             6.0.x
 
       - name: Check project folder
-        run: echo PROJECT_FOLDER
         run: ls -R $PROJECT_FOLDER
 
       - name: Install Dependencies
